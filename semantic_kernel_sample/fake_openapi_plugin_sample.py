@@ -5,7 +5,7 @@ import logging
 from semantic_kernel.functions.kernel_arguments import KernelArguments
 
 
-OPENAPI_FILE = "../fake_api/openapi.json"
+OPENAPI_FILE = "../sample_apis/fake_openapi.json"
 
 logger = logging.getLogger(__name__)
 

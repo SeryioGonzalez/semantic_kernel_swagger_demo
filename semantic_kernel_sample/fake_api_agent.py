@@ -16,7 +16,7 @@ from semantic_kernel.connectors.ai.open_ai.prompt_execution_settings.azure_chat_
 
 
 AZURE_OPENAI_DEPLOYMENT = "gpt-4o-2024-11-20"
-OPENAPI_FILE = "../fake_api/openapi.json"
+OPENAPI_FILE = "../sample_apis/fake_openapi.json"
 SERVICE_ID = "az_openai_chat_gpt4o"
 USER_INPUT = "I want to know which products are available in the store."
 

@@ -1,6 +1,6 @@
 
 API_ENDPOINT="http://127.0.0.1:8000"
-OPENAIAPI_SPEC_FILE="openapi.json"
+OPENAIAPI_SPEC_FILE="fake_openapi.json"
 
 SLEEP_TIME=0.1
 
