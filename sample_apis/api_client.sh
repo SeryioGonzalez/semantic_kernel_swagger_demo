@@ -1,6 +1,11 @@
 
 API_ENDPOINT="http://127.0.0.1:8000"
-OPENAIAPI_SPEC_FILE="fake_openapi.json"
+OPENAIAPI_SPEC_FILE=$1
+
+if [ -z "$OPENAIAPI_SPEC_FILE" ]; then
+    echo "Usage: $0 <openapi_spec_file>"
+    exit 1
+fi
 
 SLEEP_TIME=0.1
 
