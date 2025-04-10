@@ -13,8 +13,6 @@ from semantic_kernel.connectors.ai.open_ai.prompt_execution_settings.azure_chat_
     AzureChatPromptExecutionSettings,
 )
 
-
-
 AZURE_OPENAI_DEPLOYMENT = "gpt-4o-2024-11-20"
 OPENAPI_FILE = "../sample_apis/fake_openapi.json"
 SERVICE_ID = "az_openai_chat_gpt4o"
@@ -42,7 +40,6 @@ async def main():
     print("Create a chat history collection")
     history = ChatHistory()
     history.add_user_message(USER_INPUT)
-
 
     print("Enable planning")
     execution_settings = AzureChatPromptExecutionSettings()

@@ -19,6 +19,12 @@ AZURE_OPENAI_DEPLOYMENT = "gpt-4o-2024-11-20"
 OPENAPI_FILE = "../sample_apis/shop_openapi.json"
 SERVICE_ID = "az_openai_chat_gpt4o"
 
+SYSTEM_MESSAGE = """
+You are a helpful assistant that can answer questions about the products available in the store.
+Limit yourself to questions related to the store.
+If the user asks about something else, please inform them that you can only answer questions related to the store.
+"""
+
 async def main():
     """Client"""
     print("Starting agent")
@@ -38,11 +44,15 @@ async def main():
     _ = kernel.add_plugin_from_openapi(plugin_name="openApiPlugin", openapi_document_path=OPENAPI_FILE)
 
     print("Create a chat history collection")
-    history = ChatHistory()
+
+    history = ChatHistory(system_message=SYSTEM_MESSAGE)
     
     print("Enable planning")
     execution_settings = AzureChatPromptExecutionSettings()
     execution_settings.function_choice_behavior = FunctionChoiceBehavior.Auto()
+
+
+
 
     # Start an interactive loop
     while True:
